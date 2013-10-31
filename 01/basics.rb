@@ -1,3 +1,83 @@
+# Variables as a link to object
+a="test"
+b=a
+a[0]="b"
+puts "Variables as a reference Ex.1"
+puts "==================================================================="
+puts b
+puts
+
+class Foo
+
+  attr_accessor :bar
+
+  def initialize(value)
+    self.bar=value
+  end
+
+  def change
+    self.bar+=1
+  end
+
+
+end
+
+foo = Foo.new(1)
+bar=foo
+foo.change
+
+puts "Variables as a reference Ex.2"
+puts "==================================================================="
+puts bar.inspect
+puts
+
+
+# Expressions
+a=1
+b= if a==1
+     2
+   else
+     3
+   end
+puts "Expressions example"
+puts "==================================================================="
+puts a
+puts b
+puts
+
+
+# Symbols
+a=:foo
+b=:foo
+
+puts "Symbols"
+puts "==================================================================="
+puts a.object_id
+puts b.object_id
+puts
+a="foo"
+b="foo"
+puts "Strings"
+puts "==================================================================="
+puts a.object_id
+puts b.object_id
+puts
+a=1
+b=1
+puts "Integers"
+puts "==================================================================="
+puts a.object_id
+puts b.object_id
+puts
+a=4611686018427387904
+b=4611686018427387904
+puts "Integers after Fixnum range"
+puts "==================================================================="
+puts a.object_id
+puts b.object_id
+puts
+
+
 # Class as value
 mary = class Cow
 
