@@ -1,3 +1,7 @@
+#Ruby and RubyOnRails course examples by masterofcode.com
+#Copyright (C) 2013  Masterofcode LLC
+
+
 @test_array = [1, 2, 3, 4, 5, "b", "c", "d"]
 
 

@@ -1,3 +1,7 @@
+#Ruby and RubyOnRails course examples by masterofcode.com
+#Copyright (C) 2013  Masterofcode LLC
+
+
 puts "Define by old syntax"
 puts "==================================================================="
 @test_hash={:key1=> "value1", :key2=> "value2" }

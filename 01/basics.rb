@@ -1,3 +1,6 @@
+#Ruby and RubyOnRails course examples by masterofcode.com
+#Copyright (C) 2013  Masterofcode LLC
+
 # Variables as a link to object
 
 #Ex.1
