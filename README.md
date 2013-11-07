@@ -1,4 +1,4 @@
 rorcourse
 =========
 
-Ryby and RoR course by masterofcode.com , Cherkasy, Ukraine
+Ruby and RoR course by masterofcode.com , Cherkasy, Ukraine
