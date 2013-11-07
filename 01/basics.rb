@@ -1,4 +1,6 @@
 # Variables as a link to object
+
+#Ex.1
 a="test"
 b=a
 a[0]="b"
@@ -7,6 +9,7 @@ puts "==================================================================="
 puts b
 puts
 
+#Ex.1
 class Foo
 
   attr_accessor :bar
@@ -88,9 +91,10 @@ mary = class Cow
   self
 end
 
+z= mary.new
+
 puts "Class by value"
 puts "==================================================================="
-z= mary.new
 z.moo
 puts
 
@@ -102,10 +106,10 @@ dolly = Class.new(Object) do
   end
 
 end
+x= dolly.new
 
 puts "Class as dynamic object"
 puts "==================================================================="
-x= dolly.new
 x.moo
 puts z.class
 puts dolly.class
