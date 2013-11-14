@@ -77,6 +77,18 @@ rescue LocalJumpError => e
   puts "==================================================================="
 end
 
+# Define Proc inside the method
+puts "Proc defined inside the method"
+puts "==================================================================="
+
+def zoo
+  d = Proc.new { puts "Im a Proc with return defined in method"; return }
+  d.call
+  puts "After Proc call"
+end
+
+zoo
+
 
 puts
 # Arguments difference
@@ -137,5 +149,25 @@ puts "Callbacks example"
 puts "==================================================================="
 odd?(5,{success: Proc.new {puts "Success!"},fail: Proc.new { puts "Fail!"}})
 odd?(6,{success: Proc.new {puts "Success!"},fail: Proc.new { puts "Fail!"}})
+
+puts
+# Common use case of Procs and lambdas  - callbacks + factory of lambdas
+puts "Callbacks example with lambdas factories"
+puts "==================================================================="
+def odd_callback_factory
+  {success: success_callback_factory,fail: fail_callback_factory}
+end
+
+def success_callback_factory
+  -> {puts "Success!"}
+end
+
+def fail_callback_factory
+  -> { puts "Fail!"}
+end
+
+
+odd?(5, odd_callback_factory)
+odd?(6, odd_callback_factory)
 
 
