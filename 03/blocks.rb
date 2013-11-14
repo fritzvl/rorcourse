@@ -1,3 +1,6 @@
+#Ruby and RubyOnRails course examples by masterofcode.com
+#Copyright (C) 2013  Masterofcode LLC
+
 # Simple block example
 def foo(a, b, &block)
 
@@ -89,6 +92,27 @@ end
 
 zoo
 
+puts
+puts "Proc defined in another method"
+puts "==================================================================="
+
+
+def boo
+  Proc.new { puts "Im a Proc with return defined in method"; return }
+end
+
+def deboo
+  boo.call
+
+rescue LocalJumpError => e
+  puts "Error!!!"
+  puts "==================================================================="
+  puts e.message
+  puts e.backtrace
+  puts "==================================================================="
+end
+
+deboo
 
 puts
 # Arguments difference
@@ -138,32 +162,33 @@ puts
 def odd?(value, callbacks)
   puts "Is #{value} odd? "
   if value.respond_to?(:odd?) && value.odd?
-     callbacks[:success].call
-   else
-     callbacks[:fail].call
-   end
+    callbacks[:success].call
+  else
+    callbacks[:fail].call
+  end
 
 end
 
 puts "Callbacks example"
 puts "==================================================================="
-odd?(5,{success: Proc.new {puts "Success!"},fail: Proc.new { puts "Fail!"}})
-odd?(6,{success: Proc.new {puts "Success!"},fail: Proc.new { puts "Fail!"}})
+odd?(5, {success: Proc.new { puts "Success!" }, fail: Proc.new { puts "Fail!" }})
+odd?(6, {success: Proc.new { puts "Success!" }, fail: Proc.new { puts "Fail!" }})
 
 puts
 # Common use case of Procs and lambdas  - callbacks + factory of lambdas
 puts "Callbacks example with lambdas factories"
 puts "==================================================================="
+
 def odd_callback_factory
-  {success: success_callback_factory,fail: fail_callback_factory}
+  {success: success_callback_factory, fail: fail_callback_factory}
 end
 
 def success_callback_factory
-  -> {puts "Success!"}
+  -> { puts "Success!" }
 end
 
 def fail_callback_factory
-  -> { puts "Fail!"}
+  -> { puts "Fail!" }
 end
 
 
