@@ -4,6 +4,8 @@ Ruby and RoR course
 Ruby and RoR course by masterofcode.com , Cherkasy, Ukraine
 
 
+Lesson 04 example gem codebase located at https://github.com/fritzvl/moc_example
+
 
 Ruby and RubyOnRails course examples by masterofcode.com
 Copyright (C) 2013  Masterofcode LLC.

@@ -1,4 +1,0 @@
-#!/usr/bin/env ruby
-
-require 'example_moc'
-puts ExampleMoc.hello(ARGV[0])

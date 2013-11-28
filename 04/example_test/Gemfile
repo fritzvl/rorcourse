@@ -1,3 +1,4 @@
 source "https://rubygems.org"
 
-gem "example_moc", :git=>"https://github.com/fritzvl/rorcourse", :path=>"04/example_moc"
+gem "example_moc", '~>0.0.2',:git=>"git://github.com/fritzvl/moc_example"  #:github=>"fritzvl/moc_example"   and  :path=>'/path/to/your/unpacked/gem'
+
