@@ -1,0 +1,3 @@
+source "https://rubygems.org"
+
+gem "example_moc", :git=>"https://github.com/fritzvl/rorcourse", :path=>"04/example_moc"
