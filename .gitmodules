@@ -1,0 +1,3 @@
+[submodule "04/example_moc"]
+	path = 04/example_moc
+	url = git://github.com/fritzvl/moc_example
